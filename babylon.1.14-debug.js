@@ -17884,7 +17884,7 @@ var BABYLON;
             var manifestChecked = function (success) {
                 scene.database = database;
 
-                var plugin = _this._getPluginForFilename(sceneFilename);
+                var plugin = SceneLoader._getPluginForFilename(sceneFilename);
 
                 var importMeshFromData = function (data) {
                     var meshes = [];
@@ -17945,7 +17945,7 @@ var BABYLON;
         * @param scene is the instance of BABYLON.Scene to append to
         */
         SceneLoader.Append = function (rootUrl, sceneFilename, scene, onsuccess, progressCallBack, onerror) {
-            var plugin = this._getPluginForFilename(sceneFilename.name || sceneFilename);
+            var plugin = SceneLoader._getPluginForFilename(sceneFilename.name || sceneFilename);
             var database;
 
             if (SceneLoader.ShowLoadingScreen) {
